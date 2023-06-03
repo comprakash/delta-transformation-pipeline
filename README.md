@@ -1,9 +1,12 @@
 # delta-transformation-pipeline
 A transformation pipeline for Delta Lake
 
-# Setup
+## Requirements
+- Linux machine
+
+## Setup
 - Download Anaconda, Docker, MiniKube
-- `conda create --name delta-transformation-pipeline python=3.11.3`
+- `conda create --name delta-transformation-pipeline python=3.10.11`
 - `conda activate delta-transformation-pipeline`
-- `pip install poetry`  
+- `conda install poetry`  
 - `poetry install`
