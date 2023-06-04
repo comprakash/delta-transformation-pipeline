@@ -152,6 +152,18 @@ files = [
 ]
 
 [[package]]
+name = "asn1crypto"
+version = "1.5.1"
+description = "Fast ASN.1 parser and serializer with definitions for private keys, public keys, certificates, CRL, OCSP, CMS, PKCS#3, PKCS#7, PKCS#8, PKCS#12, PKCS#5, X.509 and TSP"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "asn1crypto-1.5.1-py2.py3-none-any.whl", hash = "sha256:db4e40728b728508912cbb3d44f19ce188f218e9eba635821bb4b68564f8fd67"},
+    {file = "asn1crypto-1.5.1.tar.gz", hash = "sha256:13ae38502be632115abf8a24cbe5f4da52e3b5231990aff31123c805306ccb9c"},
+]
+
+[[package]]
 name = "async-timeout"
 version = "4.0.2"
 description = "Timeout context manager for asyncio programs"
@@ -197,10 +209,12 @@ files = [
 [package.dependencies]
 boto3 = ">=1.20.32,<2.0.0"
 botocore = ">=1.23.32,<2.0.0"
+deltalake = {version = ">=0.6.4,<0.10.0", optional = true, markers = "extra == \"deltalake\""}
 modin = {version = ">=0.20.1,<0.21.0", optional = true, markers = "extra == \"modin\""}
 numpy = ">=1.18,<2.0"
 packaging = ">=23.1,<24.0"
 pandas = ">=1.2.0,<1.5.0 || >1.5.0,<3.0.0"
+pg8000 = {version = ">=1.29.0,<2.0.0", optional = true, markers = "extra == \"postgres\""}
 pyarrow = ">=7.0.0"
 ray = {version = ">=2.0.0,<2.5.0", extras = ["data", "default"], optional = true, markers = "extra == \"ray\""}
 typing-extensions = ">=4.4.0,<5.0.0"
@@ -1294,6 +1308,22 @@ pytz = ">=2020.1"
 test = ["hypothesis (>=5.5.3)", "pytest (>=6.0)", "pytest-xdist (>=1.31)"]
 
 [[package]]
+name = "pg8000"
+version = "1.29.6"
+description = "PostgreSQL interface library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "pg8000-1.29.6-py3-none-any.whl", hash = "sha256:3c7f74843adca879a309c46a880dac797b959db41122eebf59e3e31701dbb8b0"},
+    {file = "pg8000-1.29.6.tar.gz", hash = "sha256:ba39c1196408ebe19b23710823871ba3b694df030c4f7a7e2c49f1512091d142"},
+]
+
+[package.dependencies]
+python-dateutil = ">=2.8.2"
+scramp = ">=1.4.3"
+
+[[package]]
 name = "platformdirs"
 version = "3.5.1"
 description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
@@ -1818,6 +1848,21 @@ botocore = ">=1.12.36,<2.0a.0"
 crt = ["botocore[crt] (>=1.20.29,<2.0a.0)"]
 
 [[package]]
+name = "scramp"
+version = "1.4.4"
+description = "An implementation of the SCRAM protocol."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "scramp-1.4.4-py3-none-any.whl", hash = "sha256:b142312df7c2977241d951318b7ee923d6b7a4f75ba0f05b621ece1ed616faa3"},
+    {file = "scramp-1.4.4.tar.gz", hash = "sha256:b7022a140040f33cf863ab2657917ed05287a807b917950489b89b9f685d59bc"},
+]
+
+[package.dependencies]
+asn1crypto = ">=1.5.1"
+
+[[package]]
 name = "six"
 version = "1.16.0"
 description = "Python 2 and 3 compatibility utilities"
@@ -2016,4 +2061,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "261760ac75eaf36de53a036d85e83e59ebe8403c3abaf0a5829c6d4505c95ee2"
+content-hash = "bb6b7ecbf741698385193aff619d8ccc6b9229872f431b5060d2b0b1cb218d4f"

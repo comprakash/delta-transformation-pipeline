@@ -9,8 +9,7 @@ packages = [{include = "transform_delta"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-awswrangler = { version = "^3.1.1", extras = ["ray", "modin"] }
-deltalake = "^0.9.0"
+awswrangler = { version = "^3.1.1", extras = ["ray", "modin", "deltalake", "postgres"] }
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.1"
