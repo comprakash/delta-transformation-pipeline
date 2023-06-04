@@ -12,7 +12,19 @@ A transformation pipeline for Delta Lake
 - `poetry install`
 - `poetry self add poetry-dotenv-plugin`
 
-## AWS Setup
+## AWS 
+For Delta-rs library:
+```
+aws dynamodb create-table --table-name delta_rs_lock_table \
+    --region ap-south-1 \
+    --attribute-definitions \
+        AttributeName=key,AttributeType=S \
+    --key-schema \
+        AttributeName=key,KeyType=HASH \
+    --billing-mode PAY_PER_REQUEST
+```
+
+For Spark Delta Lake library:
 ```
 aws dynamodb create-table \
   --region ap-south-1 \
