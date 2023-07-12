@@ -1,3 +1,5 @@
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
+
 # delta-transformation-pipeline
 A transformation pipeline for Delta Lake
 
@@ -11,6 +13,9 @@ A transformation pipeline for Delta Lake
 - `conda install poetry`  
 - `poetry install`
 - `poetry self add poetry-dotenv-plugin`
+
+## Build Docker Images
+- `docker `
 
 ## AWS 
 For Delta-rs library:
