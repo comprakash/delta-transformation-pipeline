@@ -5,7 +5,7 @@ description = "A transformation pipeline for Delta Lake"
 license = "GPL-3.0 license"
 authors = ["Om Prakash C <comprakash@gmail.com>"]
 readme = ["README.md", "LICENSE"]
-packages = [{include = "transform_delta"}]
+packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -13,6 +13,8 @@ awswrangler = { version = "^3.2.1", extras = ["ray", "modin", "deltalake", "post
 pyspark = "3.4.1"
 
 [tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.0.2"
+pylint = "^2.17.4"
 pytest = "^7.3.1"
 pytest-cov = "^4.1.0"
 
